@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <link rel="preconnect" href="https://fonts.gstatic.com" />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Source+Sans+Pro&display=swap"
+      rel="stylesheet"
+    />
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="style.css" />
+    <link href = "https://code.jquery.com/ui/1.10.4/themes/ui-lightness/jquery-ui.css"
+         rel = "stylesheet">
+    <script type="text/javascript" src="http://code.jquery.com/jquery-latest.min.js"></script>
+      <script src = "https://code.jquery.com/jquery-1.10.2.js"></script>
+      <script src = "https://code.jquery.com/ui/1.10.4/jquery-ui.js"></script>
+      <script type="text/javascript">
+        $(function() {
+            $('.date-picker-year').datepicker({
+                changeYear: true,
+                showButtonPanel: true,
+                dateFormat: 'yy',
+                onClose: function(dateText, inst) { 
+                    var year = $("#ui-datepicker-div .ui-datepicker-year :selected").val();
+                    $(this).datepicker('setDate', new Date(year, 1));
+                }
+            });
+        $(".date-picker-year").focus(function () {
+                $(".ui-datepicker-month").hide();
+            });
+        });
+
+</script>
+    <script async await type="text/javascript" src="script.js"></script>
+    <title>Document</title>
+  </head>
+  <body>
+    <div class="main">
+      <div class="title">
+        <div id="gender">
+          <h4>Your Gender</h4>
+          <div class="option" id="male active">Male</div>
+          <div class="option" id="female">Female</div>
+        </div>
+      </div>
+      <div class="calc-choice calc-medium"><h4>Enter your parameters</h4></div>
+      <div class="parameters" id="param">
+        <input type="number" id="height" placeholder="Height" class="calc-item" />
+        <input type="number" id="weight" placeholder="Weight" class="calc-item" />
+        <p>Date of birth: <input type = "text" id = "datepicker-13" class="date-picker-year"></p>
+      </div>
+      <div class="subtitle"><h4>Your physical activity</h4></div>
+      <div class="calc-choice calc-big">
+        <div data-ratio="1.2" id="low" class="calc-item">Low activity</div>
+        <div data-ratio="1.375" id="small" class="calc-item active">
+          Little activity
+        </div>
+        <div data-ratio="1.55" id="medium" class="calc-item">
+          Medium activity
+        </div>
+        <div data-ratio="1.725" id="high" class="calc-item">High activity</div>
+      </div>
+      <div class="calc-result">
+        <br />
+        <h3>Daily CALORIES :</h3>
+        <h4>____________</h4>
+      </div>
+    </div>
+  </body>
+</html>

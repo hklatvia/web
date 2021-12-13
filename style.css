@@ -1,0 +1,49 @@
+html * {
+  font-family: 'Source Sans Pro', sans-serif;
+}
+.title {
+  display: flex;
+}
+
+.option {
+  display: inline-flex;
+  margin-left: 20px;
+  width: 70px;
+  height: 20px;
+  border-bottom: 2px solid teal;
+  border-radius: 2px;
+  align-items: center;
+  text-align: center;
+}
+.active,
+.male:hover {
+  color: white;
+  background-color: teal;
+  padding: 5px;
+  width: 70px;
+  height: 20px;
+}
+.calc-item {
+  width: 150px;
+  height: 20px;
+  border-bottom: 2px solid teal;
+  border-top: none;
+  border-left: none;
+  border-radius: 5%;
+  padding-bottom: 10px;
+  display: inline;
+  margin: 20px;
+}
+.calc-result {
+  margin-right: 20px;
+  padding: 20px;
+  display: inline-flex;
+}
+.main {
+  margin: auto;
+  width: 50%;
+}
+
+.ui-datepicker-calendar {
+  display: none;
+}
