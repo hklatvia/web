@@ -37,11 +37,11 @@ function getStaticInformation(parenSelector, activeClass) {
       }
 
       //removes active class after click
-      // elements.forEach((elem) => {
-      //   elem.classList.remove(activeClass);
-      // });
+      elements.forEach((elem) => {
+        elem.classList.remove(activeClass);
+      });
 
-      // e.target.classList.add(activeClass);
+      e.target.classList.add(activeClass);
       calcTotal();
     });
   });
