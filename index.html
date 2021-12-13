@@ -12,6 +12,24 @@
     <link rel="stylesheet" href="style.css" />
     <link href = "https://code.jquery.com/ui/1.10.4/themes/ui-lightness/jquery-ui.css"
          rel = "stylesheet">
+    <script type="text/javascript" src="http://code.jquery.com/jquery-latest.min.js"></script>
+      <script src = "https://code.jquery.com/jquery-1.10.2.js"></script>
+      <script src = "https://code.jquery.com/ui/1.10.4/jquery-ui.js"></script>
+      <script type="text/javascript">
+        $(function() {
+            $('.date-picker-year').datepicker({
+                changeYear: true,
+                showButtonPanel: true,
+                dateFormat: 'yy',
+                onClose: function(dateText, inst) { 
+                    var year = $("#ui-datepicker-div .ui-datepicker-year :selected").val();
+                    $(this).datepicker('setDate', new Date(year, 1));
+                }
+            });
+        $(".date-picker-year").focus(function () {
+                $(".ui-datepicker-month").hide();
+            });
+        });
 
 </script>
     <script async await type="text/javascript" src="script.js"></script>
