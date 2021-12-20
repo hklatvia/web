@@ -21,7 +21,8 @@
                 changeYear: true,
                 showButtonPanel: true,
                 dateFormat: 'yy',
-                onClose: function(dateText, inst) { 
+                yearRange: '1950:2021',
+                    onClose: function(dateText, inst) { 
                     var year = $("#ui-datepicker-div .ui-datepicker-year :selected").val();
                     $(this).datepicker('setDate', new Date(year, 1));
                 }
@@ -48,7 +49,7 @@
       <div class="parameters" id="param">
         <input type="number" id="height" placeholder="Height" class="calc-item" />
         <input type="number" id="weight" placeholder="Weight" class="calc-item" />
-        <p>Date of birth: <input type = "text" id = "datepicker-13" class="date-picker-year"></p>
+        <p>Year of birth: <input type = "text" id = "datepicker-13" class="date-picker-year"></p>
       </div>
       <div class="subtitle"><h4>Your physical activity</h4></div>
       <div class="calc-choice calc-big">
